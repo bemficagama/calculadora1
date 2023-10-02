@@ -1,0 +1,17 @@
+.btSelector {
+    color: white;
+    background-color: #8aaed0; 
+    width: 7rem;
+    border-radius: 25px;
+    border-width: 0;
+    margin: 10px;
+}
+
+.btSelector:active,.btSelector:hover, .btSelector:focus {
+    color: #0c619a;
+    background-color: #759dc1; 
+    width: 7rem;
+    border-radius: 25px;
+    border-width: 0;
+    margin: 10px;
+}

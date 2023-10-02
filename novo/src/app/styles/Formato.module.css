@@ -1,0 +1,17 @@
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexOptions {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    font-size: large;
+    font-weight: 500;
+    width: 180px;
+    text-align: center;
+    margin-right: 15px;
+}

@@ -1,0 +1,19 @@
+.btSelector {
+    color: #0c619a;
+    background-color: #8aaed0; 
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    border-width: 0;
+}
+
+.btSelectorActive {
+    color: white;
+    font-weight: bold;
+    background-color: #759dc1; 
+    width: 7rem;
+    height: 3rem;
+    border-radius: 25px;
+    border-width: 0;
+    border: 2px solid yellowgreen;
+}
