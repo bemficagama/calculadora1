@@ -1,15 +1,15 @@
-import Image from 'next/image'
+'use client'
 
+import Image from 'next/image'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import styles from '../styles/Formato.module.css'
 import { redirect, useRouter } from 'next/navigation'
 import emailjs from "@emailjs/browser"
 import { send } from 'process';
 
 
-export default function Entrada() {
+export function Entrada() {
     const router = useRouter()
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
@@ -56,14 +56,6 @@ export default function Entrada() {
               templatePrams,
               process.env.NEXT_PUBLIC_EMAILJS_USER_ID
             )
-            // .then(
-            //   (result) => {
-            //     alert(result.text);
-            //   },
-            //   (error) => {
-            //     alert(error.text);
-            //   }
-            // );
         }
       };
     
@@ -75,14 +67,6 @@ export default function Entrada() {
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='form-row'>
-                            <div className="d-flex justify-content-center" >
-                                <Image
-                                    src="/calc/logo.png"
-                                    width={123}
-                                    height={92}
-                                    alt="Mili Profissional"
-                                />
-                            </div>
                         </div>
 
                         <div className="d-flex justify-content-center">
@@ -110,7 +94,7 @@ export default function Entrada() {
 
 
                                 <div>
-                                    <button className={`${styles["btSelector"]} mt-4`}>Acessar Calculadora</button>
+                                    <button style={{marginTop: '15px'}} className='button1'>Acessar Calculadora</button>
                                 </div>
                             </div>
                         </div>

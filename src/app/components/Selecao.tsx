@@ -10,11 +10,10 @@ import PesoRolo from "./PesoRolo"
 import Comprimento from "./Comprimento"
 import ComprimentoRolo from "./ComprimentoRolo"
 
-import Formato from "../components/Formato"
-import Selecionado from "../components/Selecionado"
+import Formato from "./Formato"
+import Selecionado from "./Selecionado"
 
 import styles from "../styles/Selecao.module.css"
-
 
 export function Selecao() {
     const [selecionado, setSelecionado] = useState(0)

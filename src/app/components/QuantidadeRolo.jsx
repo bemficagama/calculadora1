@@ -48,7 +48,7 @@ export default function QuantidadeRolo() {
             </div>
             <div className="row">
                 <div className="col">
-                    <CampoNumerico value={gramatura} onChange={gramaturaChange} titulo="Gramatura" unidade="(g/m²) gramas por metro quadrado"/>
+                    <CampoNumerico value={gramatura} onChange={gramaturaChange} titulo="Gramatura" unidade="(g/m²) Gramatura"/>
                 </div>
                 <div className="col">
                     <CampoNumerico value={peso} onChange={pesoChange} titulo="Peso" unidade="(Kg) Quilogramas" />

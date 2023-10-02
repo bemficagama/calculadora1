@@ -2,10 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ImportBsJS from "./components/importBsJS";
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Cabecalho from './components/Cabecalho'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Calculadora de Papéis',
@@ -19,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ImportBsJS />
         <Cabecalho />
         {children}
