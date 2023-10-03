@@ -9,17 +9,17 @@ import QuantidadeRolo from "./QuantidadeRolo"
 import PesoRolo from "./PesoRolo"
 import Comprimento from "./Comprimento"
 import ComprimentoRolo from "./ComprimentoRolo"
-
 import Formato from "./Formato"
 import Selecionado from "./Selecionado"
-
 import styles from "../styles/Selecao.module.css"
+import { Corpo } from "./Corpo"
+
 
 export function Selecao() {
     const [selecionado, setSelecionado] = useState(0)
     const [formato, setFormato] = useState(0)
 
-    function Corpo() {
+    function Corpo1() {
         if (formato === 0) {
             if (selecionado === 0) {
                 return <Gramatura />
@@ -57,7 +57,7 @@ export function Selecao() {
                 <Selecionado setSelecionado={setSelecionado} />
             </div>
             <div className={styles.flexGroup}>
-                <Corpo />
+                <Corpo formato={formato} opcao={selecionado} />
             </div>
         </div >
     )

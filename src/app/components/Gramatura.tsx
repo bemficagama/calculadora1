@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import CampoNumerico from '../components/CampoNumerico'
-import Resultado from '../components/Resultado'
+import CampoNumerico from './CampoNumerico'
+import Resultado from './Resultado'
 
 
 export default function Gramatura() {
@@ -20,19 +20,19 @@ export default function Gramatura() {
         setGramatura(temp ? temp : 0.00)
     }
 
-    const larguraChange = (value) => {
+    const larguraChange = (value: number) => {
         setLargura(value)
     }
 
-    const comprimentoChange = (value) => {
+    const comprimentoChange = (value: number) => {
         setComprimento(value)
     }
 
-    const quantidadeChange = (value) => {
+    const quantidadeChange = (value: number) => {
         setQuantidade(value)
     }
 
-    const pesoChange = (value) => {
+    const pesoChange = (value: number) => {
         setPeso(value)
     }
 
