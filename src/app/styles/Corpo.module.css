@@ -1,0 +1,12 @@
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.flexGroup {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+}
