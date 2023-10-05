@@ -19,26 +19,6 @@ export function Selecao() {
     const [selecionado, setSelecionado] = useState(0)
     const [formato, setFormato] = useState(0)
 
-    function Corpo1() {
-        if (formato === 0) {
-            if (selecionado === 0) {
-                return <Gramatura />
-            } else if (selecionado === 1) {
-                return <Quantidade />
-            } else if (selecionado === 2) {
-                return <Peso />
-            } else return <Comprimento />
-        } else if (formato === 1) {
-            if (selecionado === 0) {
-                return <GramaturaRolo />
-            } else if (selecionado === 1) {
-                return <QuantidadeRolo />
-            } else if (selecionado === 2) {
-                return <PesoRolo />
-            } else return <ComprimentoRolo />
-        }
-    }
-
     return (
         <div className={styles.flexContainer}>
             <div className={styles.flexGroup}>

@@ -23,8 +23,7 @@ export function Corpo(props: CorpoProps) {
 
     const updateResultado = () => {
         const temp = GrandezaOpcoes[props.opcao].resultado.formulas[props.formato](campo1, campo2, campo3, campo4)
-        //const temp = Math.round(((+peso / +quantidade / +comprimento / +largura) * 100000 * 100) * 100) / 100
-        //setResultado(temp ? temp : 0.00)
+        setResultado(temp ? temp : 0.00)
     }
 
     const campo1Change = (value: number) => {
