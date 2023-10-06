@@ -1,14 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react"
-import Gramatura from "./Gramatura"
-import Quantidade from "./Quantidade"
-import Peso from "./Peso"
-import GramaturaRolo from "./GramaturaRolo"
-import QuantidadeRolo from "./QuantidadeRolo"
-import PesoRolo from "./PesoRolo"
-import Comprimento from "./Comprimento"
-import ComprimentoRolo from "./ComprimentoRolo"
+import { useState} from "react"
 import Formato from "./Formato"
 import Selecionado from "./Selecionado"
 import styles from "../styles/Selecao.module.css"

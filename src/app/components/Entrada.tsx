@@ -4,9 +4,7 @@ import Image from 'next/image'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { redirect, useRouter } from 'next/navigation'
-import emailjs from "@emailjs/browser"
-import { send } from 'process';
+import { useRouter } from 'next/navigation'
 
 
 export function Entrada() {
@@ -38,26 +36,51 @@ export function Entrada() {
 
     }
 
-    const sendEmail = (data: any) => {
-        const templatePrams = {
-            'nome': data.nome,
-            'email': data.email,
-            'telefone': data.telefone
+    const sendEmail = (e: any) => {
+        //e.preventDefault()
+
+        console.log('Sending')
+        const data = {
+            'nome': e.nome,
+            'email': e.email,
+            'mensagem': e.mensagem
         }
-        if (
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
-          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-        ) {
-          emailjs
-            .send(
-              process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-              process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-              templatePrams,
-              process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-            )
-        }
-      };
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then((res) => {
+            console.log('Response received')
+            if (res.status === 200) {
+                reset()
+            }
+        })
+    }
+    //<form onSubmit={handleSubmit}>
+
+    // const sendEmail = (data: any) => {
+    //     const templatePrams = {
+    //         'nome': data.nome,
+    //         'email': data.email,
+    //         'telefone': data.telefone
+    //     }
+    //     if (
+    //       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+    //       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
+    //       process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+    //     ) {
+    //       emailjs
+    //         .send(
+    //           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+    //           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+    //           templatePrams,
+    //           process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+    //         )
+    //     }
+    //   };
     
 
     return (

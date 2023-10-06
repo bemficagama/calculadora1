@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '../styles/Corpo.module.css'
 import { useEffect, useState } from "react"
 import CampoNumerico from "./CampoNumerico"
@@ -17,7 +19,6 @@ export function Corpo(props: CorpoProps) {
     const [resultado, setResultado] = useState(0.00)
 
     useEffect(() => {
-        // Update the document title using the browser API
         updateResultado()
     });
 
