@@ -9,7 +9,7 @@ export default function Cabecalho() {
 
     const sobreOnClick = (e) => {
         alert('A Calculadora foi idealizada por uma Indústria de Papéis que queria disponibilizar para seus Clientes ' +
-        'essa ferramenta, tendo como principal objetivo de verificar, de forma prática, se as descrições nas embalagens ' +
+        'essa ferramenta, tendo como principal objetivo de verificar de forma prática se as descrições nas embalagens ' +
         'de papéis refletem o seu conteúdo.')
     }
 

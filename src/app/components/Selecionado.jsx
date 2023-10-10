@@ -20,18 +20,18 @@ export default function Selecionado(props) {
             <div className={styles.optionsContainer}>
                 <div className={styles.options}>
                     <button style={{ marginRight: '10px' }} className={
-                        selecionado === 0 ? 'button1Active' : 'button1'}
+                        selecionado === 0 ? 'button buttonGreen' : 'button buttonGray'}
                         onClick={() => botaoClick(0)}>Gramatura</button>
                     <button style={{ marginRight: '10px' }} className={
-                        selecionado === 1 ? 'button1Active' : 'button1'}
+                        selecionado === 1 ? 'button buttonGreen' : 'button buttonGray'}
                         onClick={() => botaoClick(1)}>Quantidade</button>
                 </div>
                 <div className={styles.options}>
                     <button style={{ marginRight: '10px' }} className={
-                        selecionado === 2 ? 'button1Active' : 'button1'}
+                        selecionado === 2 ? 'button buttonGreen' : 'button buttonGray'}
                         onClick={() => botaoClick(2)}>Peso</button>
                     <button className={
-                        selecionado === 3 ? 'button1Active' : 'button1'}
+                        selecionado === 3 ? 'button buttonGreen' : 'button buttonGray'}
                         onClick={() => botaoClick(3)}>Comprimento</button>
                 </div>
             </div>

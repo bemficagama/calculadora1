@@ -117,7 +117,7 @@ export function Entrada() {
 
 
                                 <div>
-                                    <button style={{marginTop: '15px'}} className='button1'>Acessar Calculadora</button>
+                                    <button style={{marginTop: '15px'}} className='button buttonGray'>Acessar Calculadora</button>
                                 </div>
                             </div>
                         </div>

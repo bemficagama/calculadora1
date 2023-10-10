@@ -17,10 +17,10 @@ export default function Formato(props) {
             </div>
             <div className={styles.flexOptions}>
                 <button style={{marginRight: '10px'}} className={
-                    selecionado === 0 ? 'button1Active' : 'button1'}
+                    selecionado === 0 ? 'button buttonGreen' : 'button buttonGray'}
                     onClick={() => botaoClick(0)}>Folhas</button>
                 <button className={
-                    selecionado === 1 ? 'button1Active' : 'button1'}
+                    selecionado === 1 ? 'button buttonGreen' : 'button buttonGray'}
                     onClick={() => botaoClick(1)}>Rolos</button>
             </div>
         </div>
