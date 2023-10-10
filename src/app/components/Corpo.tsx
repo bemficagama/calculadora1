@@ -9,6 +9,8 @@ import Resultado from './Resultado'
 interface CorpoProps {
     formato: number
     opcao: number
+    reset: boolean
+    setReset: (p1: boolean) => void
 }
 
 export function Corpo(props: CorpoProps) {
@@ -20,6 +22,13 @@ export function Corpo(props: CorpoProps) {
 
     useEffect(() => {
         updateResultado()
+        if(props.reset) {
+           setCampo1(0.00)
+           setCampo2(0.00)
+           setCampo3(0.00)
+           setCampo4(0.00)
+           props.setReset(false)
+        }
     });
 
     const updateResultado = () => {
@@ -49,12 +58,12 @@ export function Corpo(props: CorpoProps) {
         <div className={styles.flexContainer}>
             <div className={styles.flexGroup}>
                 <div>
-                    p1<CampoNumerico value={campo1} onChange={(v: number) => setCampo1(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[0].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[0].unidade[props.formato]} />
-                    p2<CampoNumerico value={campo2} onChange={(v: number) => setCampo2(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[1].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[1].unidade[props.formato]} />
+                    <CampoNumerico value={campo1} onChange={(v: number) => setCampo1(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[0].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[0].unidade[props.formato]} />
+                    <CampoNumerico value={campo2} onChange={(v: number) => setCampo2(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[1].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[1].unidade[props.formato]} />
                 </div>
                 <div>
-                    p3<CampoNumerico value={campo3} onChange={(v: number) => setCampo3(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[2].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[2].unidade[props.formato]} />
-                    p4<CampoNumerico value={campo4} onChange={(v: number) => setCampo4(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[3].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[3].unidade[props.formato]} />
+                    <CampoNumerico value={campo3} onChange={(v: number) => setCampo3(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[2].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[2].unidade[props.formato]} />
+                    <CampoNumerico value={campo4} onChange={(v: number) => setCampo4(v)} titulo={GrandezaOpcoes[props.opcao].opcoes[3].titulo} unidade={GrandezaOpcoes[props.opcao].opcoes[3].unidade[props.formato]} />
                 </div>
             </div>
 

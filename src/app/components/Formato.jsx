@@ -7,6 +7,7 @@ export default function Formato(props) {
     const botaoClick = (seletor) => {
         setSelecionado(seletor)
         props.setFormato(seletor)
+        props.setReset(true)
     }
 
     return (

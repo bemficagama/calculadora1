@@ -10,6 +10,7 @@ import { Corpo } from "./Corpo"
 export function Selecao() {
     const [selecionado, setSelecionado] = useState(0)
     const [formato, setFormato] = useState(0)
+    const [reset, setReset] = useState(false)
 
     return (
         <div className={styles.flexContainer}>
@@ -23,13 +24,13 @@ export function Selecao() {
             </div>
 
             <div className={styles.flexGroup}>
-                <Formato setFormato={setFormato} />
+                <Formato setFormato={setFormato} setReset={setReset} />
             </div>
             <div className={styles.flexGroup}>
-                <Selecionado setSelecionado={setSelecionado} />
+                <Selecionado setSelecionado={setSelecionado} setReset={setReset} />
             </div>
             <div className={styles.flexGroup}>
-                <Corpo formato={formato} opcao={selecionado} />
+                <Corpo formato={formato} opcao={selecionado} reset={reset} setReset={setReset} />
             </div>
         </div >
     )

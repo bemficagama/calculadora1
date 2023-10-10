@@ -9,7 +9,7 @@
 .flexGroup {
     display: flex;
     flex-direction: row;
-    background-color: white;
+    /* background-color: white; */
     width: 60%;
 }
 

@@ -1,33 +1,44 @@
 .topNav {
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-    background-color: lightgray;
-    overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  background-color: lightgray;
+  overflow: hidden;
 }
 
-.flexContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    padding-left: 15px;
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-left: 15px;
 }
 
 .flexItem {
-    padding: 15px;
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .flexItem:hover {
-    color: #CC0000;
-  }
-  
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
+  padding: 15px;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.flexItem:hover {
+  color: #CC0000;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.logo {
+  align-self: center;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-decoration: none;
+}
+.logoSubTitulo {
+  font-size: 0.6em;
+}

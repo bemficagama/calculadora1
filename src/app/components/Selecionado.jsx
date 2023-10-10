@@ -1,5 +1,7 @@
-import { useState } from "react"
+'use client'
+
 import styles from "../styles/Selecionado.module.css"
+import { useState } from "react"
 
 export default function Selecionado(props) {
     const [selecionado, setSelecionado] = useState(0)
@@ -7,6 +9,7 @@ export default function Selecionado(props) {
     const botaoClick = (seletor) => {
         setSelecionado(seletor)
         props.setSelecionado(seletor)
+        props.setReset(true)
     }
 
     return (
