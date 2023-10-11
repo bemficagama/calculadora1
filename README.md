@@ -6,7 +6,20 @@ The Calculator was designed by a Paper Industry that wanted to make this tool av
 
 ## Getting Started
 
-Copy the file ./.env.local.example to ./.env.local, edit file copying with email account values.
+1. Clone repository: 
+```bash
+git clone git@github.com:bemficagama/calculadora1.git
+```
+
+2. Install dependency package
+```bash
+cd paper-calculator
+npm install
+# or
+yarn install 
+```
+
+3. Copy the file ./.env.local.example to ./.env.local, edit file copying with email account values.
 
 MAIL_TO -> Email that will receive the contacts.
 
@@ -16,7 +29,7 @@ MAIL_USER -> User to authenticate the server.
 
 MAIL_PASSWORD -> Password to authenticate the serve.
 
-First, run the development server:
+4. RUN the development server:
 
 ```bash
 npm run dev
