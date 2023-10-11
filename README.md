@@ -8,7 +8,7 @@ The Calculator was designed by a Paper Industry that wanted to make this tool av
 
 1. Clone repository: 
 ```bash
-git clone git@github.com:bemficagama/calculadora1.git
+git clone git@github.com:bemficagama/paper-calculator.git
 ```
 
 2. Install dependency package
