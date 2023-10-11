@@ -59,30 +59,7 @@ export function Entrada() {
             }
         })
     }
-    //<form onSubmit={handleSubmit}>
-
-    // const sendEmail = (data: any) => {
-    //     const templatePrams = {
-    //         'nome': data.nome,
-    //         'email': data.email,
-    //         'telefone': data.telefone
-    //     }
-    //     if (
-    //       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
-    //       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
-    //       process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-    //     ) {
-    //       emailjs
-    //         .send(
-    //           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-    //           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-    //           templatePrams,
-    //           process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-    //         )
-    //     }
-    //   };
     
-
     return (
         <div className='d-flex justify-content-center'>
             <div className="card m-3 col-sm-6">
